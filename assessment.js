@@ -72,8 +72,7 @@ function longestString(strs) {
 */
 
 function computeUserAverageAge(users) {
-  ages = users.map(user => user.age);
-  return Math.round(ages.reduce((a, b) => a + b, 0) / ages.length);
+  return Math.round(users.map(user => user.age).reduce((a, b) => a + b, 0) / users.length);
 }
 
 module.exports = {
